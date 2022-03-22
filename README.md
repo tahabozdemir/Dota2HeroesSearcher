@@ -12,12 +12,12 @@ Dota2HeroSearcher is a mobile application for searching heroes and heroes' stats
 - Make sure you have an internet connection.
 
 ## Screenshots
+![App Gif](ReadmeAssets/herosearcher.gif)
 
 ![Home Screen Screenshot](ReadmeAssets/homescreen.png)
 
 ![Hero Detail Screenshot](ReadmeAssets/herodetailscreen.png)
 
-![App Gif](ReadmeAssets/herosearcher.gif)
 
 ## License
 
