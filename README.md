@@ -1,4 +1,4 @@
-# Dota 2 Hero Searcher
+# Dota 2 Heroes Searcher
 Dota2HeroSearcher is a mobile application for searching heroes and heroes' stats in the Dota 2 game, created with the **Swift programming language**, **UIKit framework**, and [OpenDota API](https://docs.opendota.com/).
 
 ## Description
