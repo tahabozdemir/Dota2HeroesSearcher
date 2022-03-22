@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eGe-Qk-gOa">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dota 2 Heroes-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="reworkDota" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dED-Dl-daS">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="H4M-pM-Z1Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="heroCell" id="gtB-fl-JJs" customClass="HeroTableViewCell" customModule="reworkDota" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="93" width="390" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gtB-fl-JJs" id="Aki-3T-DDe">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HY-sG-uIU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="80"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJ4-kp-zpe">
+                                                            <rect key="frame" x="26" y="25" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="aJ4-kp-zpe" secondAttribute="height" multiplier="1:1" id="GJz-AS-Xyp"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PWM-bA-5vX">
+                                                            <rect key="frame" x="94" y="25" width="203" height="30"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="PWM-bA-5vX" secondAttribute="bottom" constant="25" id="5xY-hs-f5y"/>
+                                                        <constraint firstAttribute="bottom" secondItem="aJ4-kp-zpe" secondAttribute="bottom" constant="25" id="KDe-qr-bfk"/>
+                                                        <constraint firstItem="aJ4-kp-zpe" firstAttribute="leading" secondItem="1HY-sG-uIU" secondAttribute="leading" constant="26" id="Npq-J4-8NQ"/>
+                                                        <constraint firstItem="aJ4-kp-zpe" firstAttribute="top" secondItem="1HY-sG-uIU" secondAttribute="top" constant="25" id="cV0-t5-mp1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PWM-bA-5vX" secondAttribute="trailing" constant="93" id="p7N-hf-pVr"/>
+                                                        <constraint firstItem="PWM-bA-5vX" firstAttribute="leading" secondItem="aJ4-kp-zpe" secondAttribute="trailing" constant="38" id="qL2-2A-MiT"/>
+                                                        <constraint firstItem="PWM-bA-5vX" firstAttribute="top" secondItem="1HY-sG-uIU" secondAttribute="top" constant="25" id="tiG-zZ-C8K"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1HY-sG-uIU" firstAttribute="top" secondItem="Aki-3T-DDe" secondAttribute="top" id="PNb-01-tns"/>
+                                                <constraint firstAttribute="bottom" secondItem="1HY-sG-uIU" secondAttribute="bottom" id="PxT-Tb-AE4"/>
+                                                <constraint firstAttribute="trailing" secondItem="1HY-sG-uIU" secondAttribute="trailing" id="Yci-nl-a1Z"/>
+                                                <constraint firstItem="1HY-sG-uIU" firstAttribute="leading" secondItem="Aki-3T-DDe" secondAttribute="leading" id="sYm-4X-tik"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="heroIcon" destination="aJ4-kp-zpe" id="McI-Vs-dWV"/>
+                                            <outlet property="heroNameLabel" destination="PWM-bA-5vX" id="9jZ-tS-Kbt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dED-Dl-daS" secondAttribute="bottom" id="62w-gJ-V9l"/>
+                            <constraint firstItem="dED-Dl-daS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6By-Hc-cW1"/>
+                            <constraint firstItem="dED-Dl-daS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HEZ-Bi-e9u"/>
+                            <constraint firstItem="dED-Dl-daS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egl-DG-hZz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dota 2 Heroes" id="BV6-sd-IV4"/>
+                    <connections>
+                        <outlet property="HeroTableView" destination="dED-Dl-daS" id="NZN-8s-gEC"/>
+                        <outlet property="searchHero" destination="H4M-pM-Z1Y" id="FY6-nm-2yO"/>
+                        <segue destination="aqd-ON-YAs" kind="show" identifier="showDetail" id="TW1-Vn-Z9F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dSh-fe-fUb">
+                    <connections>
+                        <action selector="hideKeyboard:" destination="BYZ-38-t0r" id="hve-QJ-nDx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="924.375" y="96.126760563380287"/>
+        </scene>
+        <!--Hero View Controller-->
+        <scene sceneID="6hw-Ej-txS">
+            <objects>
+                <viewController id="aqd-ON-YAs" customClass="HeroViewController" customModule="reworkDota" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7YE-AL-Xke">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="smZ-Es-2GA">
+                                <rect key="frame" x="0.0" y="386.66666666666674" width="390" height="457.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="heroInfoCell" rowHeight="76" id="2Hg-rX-4fV" customClass="HeroInfoTableViewCell" customModule="reworkDota" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Hg-rX-4fV" id="0Ak-mh-OoR">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ilV-uF-Hqs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="76"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkl-TY-jFv">
+                                                            <rect key="frame" x="117" y="27" width="250" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bolt.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5A2-xi-AC1">
+                                                            <rect key="frame" x="30" y="28.666666666666742" width="20" height="19"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ilV-uF-Hqs" secondAttribute="trailing" id="5r5-fL-fbX"/>
+                                                <constraint firstAttribute="bottom" secondItem="ilV-uF-Hqs" secondAttribute="bottom" id="IOg-Et-mok"/>
+                                                <constraint firstItem="ilV-uF-Hqs" firstAttribute="top" secondItem="0Ak-mh-OoR" secondAttribute="top" id="Jmi-QE-XdY"/>
+                                                <constraint firstItem="ilV-uF-Hqs" firstAttribute="leading" secondItem="0Ak-mh-OoR" secondAttribute="leading" id="cOv-Ai-Qig"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="heroInfoImage" destination="5A2-xi-AC1" id="2ck-av-I7h"/>
+                                            <outlet property="heroInfoLabel" destination="Kkl-TY-jFv" id="l71-xE-9zl"/>
+                                            <outlet property="heroInfoView" destination="ilV-uF-Hqs" id="XPH-Fw-SuC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Xc-JD-UNw">
+                                <rect key="frame" x="16" y="326" width="358" height="34"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JXA-cP-Bew">
+                                <rect key="frame" x="16" y="122" width="358" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JXA-cP-Bew" secondAttribute="height" multiplier="179:86" id="Vm9-w4-Xiw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rOm-KN-MzC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rOm-KN-MzC" firstAttribute="trailing" secondItem="7Xc-JD-UNw" secondAttribute="trailing" constant="16" id="78N-3F-nJG"/>
+                            <constraint firstItem="rOm-KN-MzC" firstAttribute="trailing" secondItem="JXA-cP-Bew" secondAttribute="trailing" constant="16" id="B4R-K4-xFJ"/>
+                            <constraint firstItem="7Xc-JD-UNw" firstAttribute="top" secondItem="JXA-cP-Bew" secondAttribute="bottom" constant="32" id="CIw-Md-fHf"/>
+                            <constraint firstItem="JXA-cP-Bew" firstAttribute="top" secondItem="rOm-KN-MzC" secondAttribute="top" constant="34" id="EUM-JS-lkp"/>
+                            <constraint firstItem="JXA-cP-Bew" firstAttribute="leading" secondItem="rOm-KN-MzC" secondAttribute="leading" constant="16" id="SP3-eu-kXp"/>
+                            <constraint firstItem="7Xc-JD-UNw" firstAttribute="leading" secondItem="rOm-KN-MzC" secondAttribute="leading" constant="16" id="U0w-S3-ZDx"/>
+                            <constraint firstItem="smZ-Es-2GA" firstAttribute="trailing" secondItem="rOm-KN-MzC" secondAttribute="trailing" id="ao6-oI-Y2x"/>
+                            <constraint firstItem="smZ-Es-2GA" firstAttribute="top" secondItem="7Xc-JD-UNw" secondAttribute="bottom" constant="26.670000000000002" id="h2N-a6-vmd"/>
+                            <constraint firstAttribute="bottom" secondItem="smZ-Es-2GA" secondAttribute="bottom" id="qVO-us-bGP"/>
+                            <constraint firstItem="smZ-Es-2GA" firstAttribute="leading" secondItem="rOm-KN-MzC" secondAttribute="leading" id="vJR-cM-h9D"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OkV-hd-dx9"/>
+                    <connections>
+                        <outlet property="HeroInfoTableView" destination="smZ-Es-2GA" id="6L8-qc-b8X"/>
+                        <outlet property="heroImage" destination="JXA-cP-Bew" id="528-Hq-PJ6"/>
+                        <outlet property="heroNameLabel" destination="7Xc-JD-UNw" id="UaB-qX-u8b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8D-Om-MEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607.2" y="96.059113300492612"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ure-zg-Gd4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eGe-Qk-gOa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y2f-Bu-KOM">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xAV-ms-31H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Bb-Sj-KBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bolt.fill" catalog="system" width="101" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
