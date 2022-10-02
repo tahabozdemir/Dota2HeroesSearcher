@@ -5,7 +5,25 @@ class HeroViewController: UIViewController {
     @IBOutlet weak var heroNameLabel: UILabel!
     @IBOutlet weak var HeroInfoTableView: UITableView!
     @IBOutlet weak var heroImage: UIImageView!
-    var hero:HeroData?
+    var hero:HeroData?{
+        didSet{
+            guard let unwrappedHero = hero else {return}
+            let attackType = "Attack Type: \(unwrappedHero.attack_type)"
+            let baseHealthRegen = "Health Regeneration: \(unwrappedHero.base_health_regen)"
+            let baseManaRegen = "Mana Regeneration: \(unwrappedHero.base_mana_regen)"
+            let baseArmor = "Armor: \(unwrappedHero.base_armor)"
+            let baseAttackMin = "Attack: \(unwrappedHero.base_attack_min)"
+            let baseAttackMax = "Max Attack: \(unwrappedHero.base_attack_max)"
+            let baseStrength = "Strength: \(unwrappedHero.base_str)"
+            let baseAgility = "Agility: \(unwrappedHero.base_agi)"
+            let baseIntelligence = "Intelligence: \(unwrappedHero.base_int)"
+            let baseAttackRange = "Attack Range: \(unwrappedHero.attack_range)"
+            let baseAttackRate = "Attack Rate: \(unwrappedHero.attack_rate)"
+            let moveSpeed = "Move Speed: \(unwrappedHero.move_speed)"
+            let heroInfo = [attackType,baseHealthRegen,baseManaRegen,baseArmor,baseAttackMin,baseAttackMax,baseStrength,baseAgility,baseIntelligence,baseAttackRange,baseAttackRate,moveSpeed]
+            heroInfos.append(contentsOf: heroInfo)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         HeroInfoTableView.delegate = self
@@ -15,27 +33,13 @@ class HeroViewController: UIViewController {
         let url = URL(string: urlString)
         heroImage.downloaded(from: url!)
     }
-    lazy var attackType = "Attack Type: \((hero?.attack_type)!)"
-    lazy var baseHealthRegen = "Health Regeneration: \((hero?.base_health_regen)!)"
-    lazy var baseManaRegen = "Mana Regeneration: \((hero?.base_mana_regen)!)"
-    lazy var baseArmor = "Armor: \((hero?.base_armor)!)"
-    lazy var baseAttackMin = "Attack: \((hero?.base_attack_min)!)"
-    lazy var baseAttackMax = "Max Attack: \((hero?.base_attack_max)!)"
-    lazy var baseStrength = "Strength: \((hero?.base_str)!)"
-    lazy var baseAgility = "Agility: \((hero?.base_agi)!)"
-    lazy var baseIntelligence = "Intelligence: \((hero?.base_int)!)"
-    lazy var baseAttackRange = "Attack Range: \((hero?.attack_range)!)"
-    lazy var baseAttackRate = "Attack Rate: \((hero?.attack_rate)!)"
-    lazy var moveSpeed = "Move Speed: \((hero?.move_speed)!)"
-    lazy var heroInfos = [attackType,baseHealthRegen,baseManaRegen,baseArmor,baseAttackMin,baseAttackMax,baseStrength,baseAgility,baseIntelligence,baseAttackRange,baseAttackRate,moveSpeed]
+    var heroInfos:[String] = []
 }
-
 // MARK: - UITableViewDelegate - UITableViewDataSource
 extension HeroViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         heroInfos.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = HeroInfoTableView.dequeueReusableCell(withIdentifier: "heroInfoCell") as! HeroInfoTableViewCell
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
